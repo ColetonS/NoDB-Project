@@ -47,5 +47,19 @@ module.exports = {
         data[index].cuisine = cuisine
         res.status(200).send(data)
     },
+    getRandomRecipes(req, res) {
+        const menuArr = []
+        const rand1 = Math.floor(Math.random() * 20) 
+        const rand2 = Math.floor(Math.random() * 20)
+        const rand3 = Math.floor(Math.random() * 20)
+        const rand4 = Math.floor(Math.random() * 20)
+        const rand5 = Math.floor(Math.random() * 20)
+        
+        menuArr.push(rand1)
+        menuArr.push(rand2)
+        menuArr.push(rand3)
+        menuArr.push(rand4)
+        menuArr.push(rand5)
+    }
     
 }
