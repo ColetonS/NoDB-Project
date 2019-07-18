@@ -8,7 +8,7 @@ app.use(express.json())
 app.get('/api/recipes', Ctrl.getRecipes)
 app.post('/api/recipes', Ctrl.addRecipe)
 app.delete('/api/recipes/:id', Ctrl.deleteRecipe)
-// app.put('/api/recipes/:id', Ctrl.updateRecipe)
+app.put('/api/recipes/:id', Ctrl.updateRecipe)
 // app.get('/api/recipes', Ctrl.searchRecipe)
 // app.get('/api/recipes/cuisine', Ctrl.searchByCuisine)
 

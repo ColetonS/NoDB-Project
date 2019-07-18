@@ -18,10 +18,21 @@ module.exports = {
     },
     deleteRecipe(req, res) {
         const {id} = req.params
-        const index = data.findIndex(val => (
-            val.id === +id
+        const index = data.findIndex(el => (
+            el.id === +id
         ))
         data.splice(index, 1)
+        res.status(200).send(data)
+    },
+    updateRecipe(req, res) {
+        const {id} = req.params
+        const {title, img, cuisine} = req.body
+        const index = data.findIndex(el => (
+            el.id === +id
+        ))
+        data[index].title = title
+        data[index].img = img
+        data[index].cuisine = cuisine
         res.status(200).send(data)
     }
 }

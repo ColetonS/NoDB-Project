@@ -4,19 +4,19 @@ const data = [
         title: 'test',
         img: '',
         cuisine: ''
+    },
+    {
+        id: 1,
+        title: '',
+        img: '',
+        cuisine: ''
+    },
+    {
+        id: 1,
+        title: '',
+        img: '',
+        cuisine: ''
     }//,
-    // {
-    //     id: 1,
-    //     title: '',
-    //     img: '',
-    //     cuisine: ''
-    // },
-    // {
-    //     id: 1,
-    //     title: '',
-    //     img: '',
-    //     cuisine: ''
-    // },
     // {
     //     id: 1,
     //     title: '',
