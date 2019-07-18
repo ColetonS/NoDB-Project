@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import axios from 'axios'
+import './Menu.css'
 
 export default class Menu extends Component {
     constructor() {
@@ -28,26 +29,25 @@ export default class Menu extends Component {
         for (let i = 0; i < 5; i++) {
             menuArr.push(this.state.menu[Math.floor(Math.random() * (this.state.menu.length-1)) ])
         }
-        console.log(menuArr)
         this.setState({
             randomizedMenu: menuArr
         })
     }
 
     render() {
-        console.log(Math.floor(Math.random() * 20))
         const mappedMenu = this.state.randomizedMenu.map((el, i, arr) => {
            return (
                <div key={el.id}>
-                <p>Dish: {el.title}</p>
-                <p>Cuisine: {el.cuisine}</p>
+                    <p>{el.title}</p>
                </div>
            )
        })
         return (
             <div>
                 <h2>Menu</h2>
-                {mappedMenu}
+                <section className='mapped-menu'>
+                    {mappedMenu}
+                </section>
                 <button onClick={() => this.randomize()}>Generate Menu</button>
             </div>
         )
