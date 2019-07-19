@@ -7,6 +7,7 @@ export default function Header() {
             <header>
                 <Logo />
                 <h1>Recipe Generator</h1>
+                <Logo />
             </header>
         </div>
 
