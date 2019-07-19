@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 import './Menu.css'
+import Button from './Button'
 
 export default class Menu extends Component {
     constructor() {
@@ -48,7 +49,12 @@ export default class Menu extends Component {
                 <section className='mapped-menu'>
                     {mappedMenu}
                 </section>
-                <button onClick={() => this.randomize()}>Generate Menu</button>
+                <Button 
+                    onClick={() => this.randomize()}
+                    style={{backgroundColor: 'red', color: 'white'}}
+                    >
+                        Generate Menu
+                    </Button>
             </div>
         )
     }
