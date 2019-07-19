@@ -8,6 +8,7 @@ export default class Recipe extends Component {
 
     this.state = {
       edit: false
+
     };
 
     this.toggle = this.toggle.bind(this);
@@ -20,12 +21,13 @@ export default class Recipe extends Component {
   }
 
   render() {
-    let { title, cuisine } = this.props;
+    let { title, cuisine, img } = this.props;
     return (
       <div>
         <h4>{title}</h4>
         <h5>{cuisine}</h5>
-        {this.state.edit ? <EditRecipe /> : null}
+        <img src={img} />
+        {this.state.edit ? <EditRecipe id={this.props.id} editFn={this.props.editFn} handleEditTitleFn={this.props.handleEditTitleFn} handleEditCuisineFn={this.props.handleEditCuisineFn} handleEditURLFn={this.props.handleEditURLFn} /> : null}
         <Button
           onClick={this.toggle}
           style={{ backgroundColor: "blue", color: "white" }}

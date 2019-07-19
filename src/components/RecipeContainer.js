@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Recipe from "./Recipe";
 import axios from "axios";
 import Button from './Button'
+import EditRecipe from "./EditRecipe";
 
 export default class RecipeContainer extends Component {
   constructor() {
@@ -11,11 +12,15 @@ export default class RecipeContainer extends Component {
       allRecipes: [],
       title: '',
       cuisine: '',
-      url: ''
+      img: ''
     };
 
     this.addRecipe = this.addRecipe.bind(this)
     this.deleteRecipe = this.deleteRecipe.bind(this)
+    this.editRecipe = this.editRecipe.bind(this)
+    this.handleEditTitleChange = this.handleEditTitleChange.bind(this)
+    this.handleEditCuisineChange = this.handleEditCuisineChange.bind(this)
+    this.handleEditURLChange = this.handleEditURLChange.bind(this)
   }
 
   componentDidMount() {
@@ -24,6 +29,34 @@ export default class RecipeContainer extends Component {
         allRecipes: res.data
       });
     });
+  }
+
+  editRecipe(id) {
+    axios.put(`/api/recipes/${id}`, {
+        title: this.state.title,
+        img: this.state.img,
+        cuisine: this.state.cuisine
+    }).then(res => {
+        this.setState({
+            allRecipes: res.data
+        })
+    })
+  }
+
+  handleEditTitleChange(val) {
+      this.setState({
+          title: val
+      })
+  }
+  handleEditCuisineChange(val) {
+      this.setState({
+          cuisine: val
+      })
+  }
+  handleEditURLChange(val) {
+      this.setState({
+          img: val
+      })
   }
 
   deleteRecipe(id) {
@@ -58,14 +91,14 @@ export default class RecipeContainer extends Component {
     }
     handleURLChange(val) {
         this.setState({
-            url: val
+            img: val
         })
     }
 
   render() {
       const mappedRecipes = this.state.allRecipes.map((el, i, arr) => {
           return (
-              <Recipe title={el.title} img={el.img} cuisine={el.cuisine} key={el.id} id={el.id} deleteFn={this.deleteRecipe} />
+              <Recipe title={el.title} img={el.img} cuisine={el.cuisine} key={el.id} id={el.id} deleteFn={this.deleteRecipe} editFn={this.editRecipe} handleEditTitleFn={this.handleEditTitleChange} handleEditCuisineFn={this.handleEditCuisineChange} handleEditURLFn={this.handleEditURLChange} />
           )
       })
     return (
@@ -86,7 +119,7 @@ export default class RecipeContainer extends Component {
             <Button
                 onClick={this.addRecipe}
                 style={{backgroundColor: 'black', color: 'white'}}
-            >Submit</Button>
+            >Submit New Recipe</Button>
         </div>
         
         <div>
