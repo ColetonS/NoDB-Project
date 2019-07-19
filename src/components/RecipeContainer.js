@@ -12,7 +12,9 @@ export default class RecipeContainer extends Component {
       allRecipes: [],
       title: '',
       cuisine: '',
-      img: ''
+      img: '',
+      userInput: '',
+      selection: ''
     };
 
     this.addRecipe = this.addRecipe.bind(this)
@@ -29,6 +31,30 @@ export default class RecipeContainer extends Component {
         allRecipes: res.data
       });
     });
+  }
+
+  searchRecipe() {
+    axios.get(`api/recipes?${this.state.selection}=${this.state.userInput}`).then(res => {
+        this.setState({
+            allRecipes: res.data
+        })
+    })
+}
+
+  handleSelectChange(val) {
+      this.setState({
+          selection: val
+      })
+  }
+
+  handleSearchChange(val) {
+      this.setState({
+          userInput: val
+      })
+  }
+
+  search() {
+      const filteredRecipes = this.allRecipes.filter()
   }
 
   editRecipe(id) {
@@ -121,9 +147,24 @@ export default class RecipeContainer extends Component {
                 style={{backgroundColor: 'black', color: 'white'}}
             >Submit New Recipe</Button>
         </div>
+
+        <div>
+            <h3>Search Recipes</h3>
+            <input
+                onChange={e => this.handleSearchChange(e.target.value)}
+                placeholder='Search by Title or Cuisine'
+             />
+            <select onChange={e => this.handleSelectChange(e.target.value)}>
+                <option>Title</option>
+                <option>Cuisine</option>
+            </select>
+            <Button
+                onClick={this.search}
+            >Search</Button>
+        </div>
         
         <div>
-            <h3>Recipes</h3>
+            <h2>Recipe Collection</h2>
             {mappedRecipes}
         </div>
       </div>
