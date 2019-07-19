@@ -105,12 +105,18 @@ const data = [
         id: 19,
         title: 'Sushi',
         img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5QbqcEeTiifrOUnNYmC0By3DK97DrYyT-KvsQ8f4bbbCKsuzF',
-        cuisine: 'Yaki Soba'
+        cuisine: 'Japanese'
     },
     {
         id: 20,
         title: 'Chicken Teriyaki',
         img: 'https://hips.hearstapps.com/delish/assets/17/26/1498598755-teriyaki-chicken.jpg',
+        cuisine: 'Japanese'
+    },
+    {
+        id: 21,
+        title: 'Yakisoba',
+        img: 'https://www.justonecookbook.com/wp-content/uploads/2017/02/Yakisoba-NEW-II.jpg',
         cuisine: 'Japanese'
     }
 ]

@@ -3,6 +3,7 @@ let id = data.length-1
 
 module.exports = {
     getRecipes(req, res) {
+        console.log(req.query)
         if (req.query.title) {
            let filteredArr = data.filter((el, index, arr) => {
                 return el.title === req.query.title

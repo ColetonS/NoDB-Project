@@ -25,6 +25,8 @@ export default class RecipeContainer extends Component {
     this.handleEditURLChange = this.handleEditURLChange.bind(this)
   }
 
+// Fetch data from server and assign it to allRecipes
+
   componentDidMount() {
     axios.get("/api/recipes").then(res => {
       this.setState({
@@ -33,8 +35,11 @@ export default class RecipeContainer extends Component {
     });
   }
 
-  searchRecipe() {
-    axios.get(`api/recipes?${this.state.selection}=${this.state.userInput}`).then(res => {
+// Search methods 
+
+  searchQuery() {
+      console.log('hit')
+    axios.get(`/api/recipes?${this.state.selection}=${this.state.userInput}`).then(res => {
         this.setState({
             allRecipes: res.data
         })
@@ -42,9 +47,12 @@ export default class RecipeContainer extends Component {
 }
 
   handleSelectChange(val) {
-      this.setState({
+     console.log(val)
+    this.setState({
           selection: val
       })
+
+      console.log(this.state)
   }
 
   handleSearchChange(val) {
@@ -53,9 +61,16 @@ export default class RecipeContainer extends Component {
       })
   }
 
-  search() {
-      const filteredRecipes = this.allRecipes.filter()
-  }
+//   searchRecipes() {
+//       const filteredRecipes = this.state.allRecipes.filter(userInput => {
+//           return this.state.allRecipes.includes(userInput)
+
+//       this.setState({
+//           allRecipes: filteredRecipes
+//       })
+//   }
+
+// Edit methods
 
   editRecipe(id) {
     axios.put(`/api/recipes/${id}`, {
@@ -85,6 +100,8 @@ export default class RecipeContainer extends Component {
       })
   }
 
+//  Delete method
+
   deleteRecipe(id) {
       axios.delete(`/api/recipes/${id}`).then(res => {
           this.setState({
@@ -92,6 +109,8 @@ export default class RecipeContainer extends Component {
           })
       })
   }
+
+//   Add methods
 
   addRecipe() {
       axios.post('/api/recipes', {
@@ -121,6 +140,8 @@ export default class RecipeContainer extends Component {
         })
     }
 
+// Render
+
   render() {
       const mappedRecipes = this.state.allRecipes.map((el, i, arr) => {
           return (
@@ -143,7 +164,7 @@ export default class RecipeContainer extends Component {
                 placeholder='Image URL'
             />
             <Button
-                onClick={this.addRecipe}
+                onClick={() => this.addRecipe}
                 style={{backgroundColor: 'black', color: 'white'}}
             >Submit New Recipe</Button>
         </div>
@@ -155,12 +176,15 @@ export default class RecipeContainer extends Component {
                 placeholder='Search by Title or Cuisine'
              />
             <select onChange={e => this.handleSelectChange(e.target.value)}>
-                <option>Title</option>
-                <option>Cuisine</option>
+                <option value=''>Select your option</option>
+                <option value='title'>Title</option>
+                <option value='cuisine'>Cuisine</option>
             </select>
             <Button
-                onClick={this.search}
-            >Search</Button>
+                onClick={() => this.searchQuery()}
+            >
+                Search
+            </Button>
         </div>
         
         <div>
