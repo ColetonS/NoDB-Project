@@ -37,8 +37,7 @@ export default class RecipeContainer extends Component {
 
 // Search methods 
 
-  searchQuery() {
-      console.log('hit')
+  searchRecipes() {
     axios.get(`/api/recipes?${this.state.selection}=${this.state.userInput}`).then(res => {
         this.setState({
             allRecipes: res.data
@@ -47,7 +46,6 @@ export default class RecipeContainer extends Component {
 }
 
   handleSelectChange(val) {
-     console.log(val)
     this.setState({
           selection: val
       })
@@ -61,14 +59,6 @@ export default class RecipeContainer extends Component {
       })
   }
 
-//   searchRecipes() {
-//       const filteredRecipes = this.state.allRecipes.filter(userInput => {
-//           return this.state.allRecipes.includes(userInput)
-
-//       this.setState({
-//           allRecipes: filteredRecipes
-//       })
-//   }
 
 // Edit methods
 
@@ -181,7 +171,7 @@ export default class RecipeContainer extends Component {
                 <option value='cuisine'>Cuisine</option>
             </select>
             <Button
-                onClick={() => this.searchQuery()}
+                onClick={() => this.searchRecipes()}
             >
                 Search
             </Button>

@@ -11,7 +11,6 @@ function App() {
       <Header />
       <Menu />
       <RecipeContainer />
-      <Logo />
     </div>
   );
 }

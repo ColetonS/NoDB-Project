@@ -1,9 +1,11 @@
 import React from 'react'
+import myLogo from '../logo.png'
+import './Logo.css'
 
 export default function Logo() {
     return (
-        <div>
-            <h6>Logo</h6>
+        <div className='logo'>
+            <img src={myLogo} />
         </div>
     )
 }

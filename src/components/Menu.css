@@ -4,3 +4,8 @@
     /* border: 1px solid red; */
 
 }
+
+div > img {
+    width: 15vw;
+    height: auto;
+}

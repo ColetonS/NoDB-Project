@@ -40,6 +40,7 @@ export default class Menu extends Component {
            return (
                <div key={el.id}>
                     <p>{el.title}</p>
+                    <img src={el.img} />
                </div>
            )
        })
