@@ -32,6 +32,10 @@ export default class Recipe extends Component {
         >
           Edit
         </Button>
+        <Button 
+            onClick={() => {this.props.deleteFn(this.props.id)}}
+        >Delete
+        </Button>
       </div>
     );
   }

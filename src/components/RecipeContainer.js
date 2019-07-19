@@ -15,6 +15,7 @@ export default class RecipeContainer extends Component {
     };
 
     this.addRecipe = this.addRecipe.bind(this)
+    this.deleteRecipe = this.deleteRecipe.bind(this)
   }
 
   componentDidMount() {
@@ -23,6 +24,14 @@ export default class RecipeContainer extends Component {
         allRecipes: res.data
       });
     });
+  }
+
+  deleteRecipe(id) {
+      axios.delete(`/api/recipes/${id}`).then(res => {
+          this.setState({
+              allRecipes: res.data
+          })
+      })
   }
 
   addRecipe() {
@@ -56,7 +65,7 @@ export default class RecipeContainer extends Component {
   render() {
       const mappedRecipes = this.state.allRecipes.map((el, i, arr) => {
           return (
-              <Recipe title={el.title} img={el.img} cuisine={el.cuisine} key={el.id} />
+              <Recipe title={el.title} img={el.img} cuisine={el.cuisine} key={el.id} id={el.id} deleteFn={this.deleteRecipe} />
           )
       })
     return (
@@ -76,6 +85,7 @@ export default class RecipeContainer extends Component {
             />
             <Button
                 onClick={this.addRecipe}
+                style={{backgroundColor: 'black', color: 'white'}}
             >Submit</Button>
         </div>
         
