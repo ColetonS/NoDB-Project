@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import EditRecipe from "./EditRecipe";
 import Button from "./Button";
+import './Recipe.css'
 
 export default class Recipe extends Component {
   constructor() {
@@ -26,7 +27,7 @@ export default class Recipe extends Component {
       <div>
         <h4>{title}</h4>
         <h5>{cuisine}</h5>
-        <img src={img} />
+        <img src={img} alt={title} />
         {this.state.edit ? <EditRecipe id={this.props.id} editFn={this.props.editFn} handleEditTitleFn={this.props.handleEditTitleFn} handleEditCuisineFn={this.props.handleEditCuisineFn} handleEditURLFn={this.props.handleEditURLFn} /> : null}
         <Button
           onClick={this.toggle}

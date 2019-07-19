@@ -8,7 +8,7 @@ const data = [
     {
         id: 2,
         title: 'Street Tacos',
-        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD9jcmEB8QkYf-OTPQqs8ebChp_sLKCGLuy07bJudYv73FK_abww',
+        img: 'https://asimplepantry.com/wp-content/uploads/2016/01/Easy-Mexican-Recipes-Carne-Asada-Mexican-Street-Tacos-2.jpg',
         cuisine: 'Mexican'
     },
     {
@@ -50,67 +50,67 @@ const data = [
     {
         id: 10,
         title: 'Buffalo Wings',
-        img: '',
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQr1d505tYbnH6v6FtR1bTaaLLIgoJTBgiKXYRkTJxVZQvVXjq9A',
         cuisine: 'American'
     },
     {
         id: 11,
         title: 'Cheeseburgers',
-        img: '',
+        img: 'https://i2.wp.com/www.foodrepublic.com/wp-content/uploads/2012/03/033_FR11785.jpg?fit=1000%2C665&ssl=1',
         cuisine: 'American'
     },
     {
         id: 12,
         title: 'Gumbo',
-        img: '',
+        img: 'https://cdn-image.realsimple.com/sites/default/files/styles/rs_medium_image/public/1483995143/gumbo.jpg?itok=kMYN5Wvv',
         cuisine: 'American'
     },
     {
         id: 13,
         title: 'Lobster Rolls',
-        img: '',
+        img: 'https://cdn.cpnscdn.com/static.coupons.com/ext/kitchme/images/recipes/600x400/easy-lobster-rolls_42361.jpg',
         cuisine: 'American'
     },
     {
         id: 14,
         title: 'Carbonara',
-        img: '',
+        img: 'https://hips.hearstapps.com/del.h-cdn.co/assets/17/03/1484784941-white-cheddar-carbonaral1.jpg',
         cuisine: 'Italian'
     },
     {
         id: 15,
         title: 'Calzone',
-        img: '',
+        img: 'https://www.traegergrills.com/images/en-us/Shared/images/recipes/banners/Pork/Calzone_Traeger-Wood-Fired-Grills_RE_HE_M.jpg',
         cuisine: 'Italian'
     },
     {
         id: 16,
         title: 'Chicken Alfredo',
-        img: '',
+        img: 'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2015/9/15/1/FNK_Chicken-Fettucine-Alfredo_s4x3.jpg.rend.hgtvcom.826.620.suffix/1442375396342.jpeg',
         cuisine: 'Italian'
     },
     {
         id: 17,
         title: 'Ziti',
-        img: '',
+        img: 'https://www.onceuponachef.com/images/2017/10/Sausage-Baked-Ziti-1-760x557.jpg',
         cuisine: 'Italian'
     },
     {
         id: 18,
         title: 'Ramen',
-        img: '',
+        img: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/190208-delish-ramen-horizontal-093-1550096715.jpg?crop=1xw:0.9995002498750624xh;center,top&resize=480:*',
         cuisine: 'Japanese'
     },
     {
         id: 19,
         title: 'Sushi',
-        img: '',
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5QbqcEeTiifrOUnNYmC0By3DK97DrYyT-KvsQ8f4bbbCKsuzF',
         cuisine: 'Yaki Soba'
     },
     {
         id: 20,
         title: 'Chicken Teriyaki',
-        img: '',
+        img: 'https://hips.hearstapps.com/delish/assets/17/26/1498598755-teriyaki-chicken.jpg',
         cuisine: 'Japanese'
     }
 ]
