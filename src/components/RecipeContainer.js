@@ -97,7 +97,7 @@ export default class RecipeContainer extends Component {
           this.setState({
               allRecipes: res.data
           })
-      })
+      }).catch(() => {alert('error deleting')})
   }
 
 //   Add methods
@@ -111,7 +111,7 @@ export default class RecipeContainer extends Component {
           this.setState({
               allRecipes: res.data
           })
-      })
+      }).catch(() => {alert('failed to add')})
   }
 
     handleTitleChange(val) {
@@ -154,7 +154,7 @@ export default class RecipeContainer extends Component {
                 placeholder='Image URL'
             />
             <Button
-                onClick={() => this.addRecipe}
+                onClick={() => this.addRecipe()}
                 style={{backgroundColor: 'black', color: 'white'}}
             >Submit New Recipe</Button>
         </div>
