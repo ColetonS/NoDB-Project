@@ -46,7 +46,6 @@ export default class Menu extends Component {
        })
         return (
             <div>
-                <h2>Menu</h2>
                 <section className='mapped-menu'>
                     {mappedMenu}
                 </section>
@@ -54,7 +53,7 @@ export default class Menu extends Component {
                     onClick={() => this.randomize()}
                     style={{backgroundColor: 'red', color: 'white'}}
                     >
-                        Generate Menu
+                        Generate Your Weekly Menu
                     </Button>
             </div>
         )
