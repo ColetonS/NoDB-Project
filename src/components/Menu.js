@@ -51,7 +51,7 @@ export default class Menu extends Component {
                 </section>
                 <Button 
                     onClick={() => this.randomize()}
-                    style={{backgroundColor: '#93ACB5', color: 'white', borderRadius: '25px', height: '6vh'}}
+                    style={{backgroundColor: '#B81365', color: 'white', borderRadius: '25px', height: '7vh'}}
                     >
                         Generate Your Weekly Menu
                     </Button>

@@ -4,12 +4,12 @@ import './Header.css'
 
 export default function Header() {
     return (
-        <div>
+        <div id='header'>
+                <div><Logo /></div>
             <header>
-                <Logo />
                 <h1>MenYou</h1>
-                <Logo />
             </header>
+               <div><Logo /></div> 
         </div>
 
     )

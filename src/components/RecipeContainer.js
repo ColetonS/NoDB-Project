@@ -184,9 +184,10 @@ export default class RecipeContainer extends Component {
             <div><Button
             onClick={() => this.addRecipe()}
             style={{
-            backgroundColor: '#B81365',
+            backgroundColor: '#666A86',
             color: "white",
-            borderRadius: "25px"
+            borderRadius: "25px",
+            height: '30px'
             }}
             >
             Submit New Recipe
@@ -211,7 +212,8 @@ export default class RecipeContainer extends Component {
             style={{
             backgroundColor: "#51483B",
             color: "white",
-            borderRadius: "25px"
+            borderRadius: "25px",
+            height: '25px'
             }}
             >
             Search

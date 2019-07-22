@@ -22,8 +22,10 @@
 
 input {
     border-radius: 8px;
+    height: 25px;
 }
 
 select {
     border-radius: 8px;
+    height: 30px;
 }
