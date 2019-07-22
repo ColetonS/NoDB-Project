@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Menu from './components/Menu'
 import RecipeContainer from './components/RecipeContainer'
 import Logo from './components/Logo'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <Menu />
       <RecipeContainer />
+      <Footer />
     </div>
   );
 }

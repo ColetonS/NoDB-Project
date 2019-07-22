@@ -103,7 +103,7 @@ export default class RecipeContainer extends Component {
         });
       })
       .catch(() => {
-        alert("error deleting");
+        alert("failed to delete");
       });
   }
 
@@ -163,7 +163,7 @@ export default class RecipeContainer extends Component {
     });
     return (
       <div className="add-recipe-container">
-        <div className="add-recipe">
+        <section className="add-recipe">
         <h2>Add Recipe</h2>
           <div id="new-recipe">
             <div>
@@ -193,9 +193,9 @@ export default class RecipeContainer extends Component {
             Submit New Recipe
             </Button></div>
           </div>
-        </div>
+        </section>
 
-        <div>
+        <section>
           <div className="search-recipes">
           <h2>Search Recipes</h2>
             <div><input
@@ -219,12 +219,12 @@ export default class RecipeContainer extends Component {
             Search
             </Button></div>
           </div>
-        </div>
+        </section>
 
-        <div>
+        <section>
           <h2>Recipe Collection</h2>
           {mappedRecipes}
-        </div>
+        </section>
       </div>
     );
   }
