@@ -32,3 +32,16 @@
     height: 30vh;
 }
 
+#search-inputs {
+    display: flex;
+    justify-content: space-between;
+    width: 20vw;
+    /* border: 2px solid black; */
+}
+
+/* #add-inputs {
+    display: flex;
+    justify-content: space-between;
+    width: 30vw;
+    border: 2px solid darkblue;
+} */

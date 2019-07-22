@@ -1,7 +1,8 @@
 #header {
     display: flex;
     justify-content: space-around;
-    padding-bottom: 10vh;
+    padding-bottom: 3vh;
     padding-top: 3vh;
+    background-color: #40384F;
 
 }

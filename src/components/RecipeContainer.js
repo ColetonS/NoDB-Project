@@ -164,60 +164,64 @@ export default class RecipeContainer extends Component {
     return (
       <div className="add-recipe-container">
         <section className="add-recipe">
-        <h2>Add Recipe</h2>
+          <h2>Add Recipe</h2>
           <div id="new-recipe">
-            <div>
+            <div id='add-inputs'>
               <input
-            onChange={e => this.handleTitleChange(e.target.value)}
-            placeholder="Title"
-            />
-             <input
-            onChange={e => this.handleCuisineChange(e.target.value)}
-            placeholder="Cuisine"
-            />
-             <input
-            onChange={e => this.handleURLChange(e.target.value)}
-            placeholder="Image URL"
-            />
+                onChange={e => this.handleTitleChange(e.target.value)}
+                placeholder="Title"
+              />
+              <input
+                onChange={e => this.handleCuisineChange(e.target.value)}
+                placeholder="Cuisine"
+              />
+              <input
+                onChange={e => this.handleURLChange(e.target.value)}
+                placeholder="Image URL"
+              />
             </div>
 
-            <div><Button
-            onClick={() => this.addRecipe()}
-            style={{
-            backgroundColor: '#666A86',
-            color: "white",
-            borderRadius: "25px",
-            height: '30px'
-            }}
-            >
-            Submit New Recipe
-            </Button></div>
+            <div>
+              <Button
+                onClick={() => this.addRecipe()}
+                style={{
+                  backgroundColor: "#666A86",
+                  color: "white",
+                  borderRadius: "25px",
+                  height: "30px"
+                }}
+              >
+                Submit New Recipe
+              </Button>
+            </div>
           </div>
         </section>
 
         <section>
           <div className="search-recipes">
-          <h2>Search Recipes</h2>
-            <div><input
-            onChange={e => this.handleSearchChange(e.target.value)}
-            placeholder="Search by Title or Cuisine"
-            />
-            <select onChange={e => this.handleSelectChange(e.target.value)}>
-            <option value="">Select your option</option>
-            <option value="title">Title</option>
-            <option value="cuisine">Cuisine</option>
-            </select>
-            <Button
-            onClick={() => this.searchRecipes()}
-            style={{
-            backgroundColor: "#51483B",
-            color: "white",
-            borderRadius: "25px",
-            height: '25px'
-            }}
-            >
-            Search
-            </Button></div>
+            <h2>Search Recipes</h2>
+            <div id='search-inputs'>
+              <input
+                onChange={e => this.handleSearchChange(e.target.value)}
+                placeholder="Search by Title or Cuisine"
+              />
+              <select onChange={e => this.handleSelectChange(e.target.value)}>
+                <option value="">Select your option</option>
+                <option value="title">Title</option>
+                <option value="cuisine">Cuisine</option>
+              </select>
+              <Button
+                onClick={() => this.searchRecipes()}
+                style={{
+                  backgroundColor: "#51483B",
+                  color: "white",
+                  borderRadius: "25px",
+                  height: "25px"
+                }}
+              >
+                Search
+              </Button>
+            </div>
           </div>
         </section>
 
