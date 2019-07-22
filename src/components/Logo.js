@@ -5,7 +5,7 @@ import './Logo.css'
 export default function Logo() {
     return (
         <div className='logo'>
-            <img src={myLogo} />
+            <img src={myLogo} alt='MenYou logo' />
         </div>
     )
 }

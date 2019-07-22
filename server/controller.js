@@ -1,17 +1,16 @@
 const data = require('./data')
-let id = data.length-1
+let id = data.length+1
 
 module.exports = {
     getRecipes(req, res) {
-        console.log(req.query)
         if (req.query.title) {
            let filteredArr = data.filter((el, index, arr) => {
-                return el.title === req.query.title
+                return el.title.toLowerCase() === req.query.title.toLowerCase()
             })
             res.status(200).send(filteredArr)
         } else if (req.query.cuisine) {
             let filteredArr = data.filter((el, index, arr) => {
-                return el.cuisine === req.query.cuisine
+                return el.cuisine.toLowerCase() === req.query.cuisine.toLowerCase()
             }) 
             res.status(200).send(filteredArr)
         } else {

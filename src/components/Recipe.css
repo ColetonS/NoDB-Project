@@ -1,4 +1,17 @@
-img {
-    width: 20%;
-    height: 10%;
+#recipes {
+    width: 400px;
+    height: auto;
+}
+
+.recipe-container {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    margin: 50px;
+    padding: 30px;
+}
+
+.text {
+    display: flex;
+    justify-content: center;
 }

@@ -39,8 +39,8 @@ export default class Menu extends Component {
         const mappedMenu = this.state.randomizedMenu.map((el, i, arr) => {
            return (
                <div key={el.id}>
-                    <p>{el.title}</p>
-                    <img src={el.img} />
+                    <h3>{el.title}</h3>
+                    <img src={el.img} alt={el.title} />
                </div>
            )
        })
@@ -51,7 +51,7 @@ export default class Menu extends Component {
                 </section>
                 <Button 
                     onClick={() => this.randomize()}
-                    style={{backgroundColor: 'red', color: 'white'}}
+                    style={{backgroundColor: '#FF4500', color: 'white', borderRadius: '25px', height: '4vh'}}
                     >
                         Generate Your Weekly Menu
                     </Button>
