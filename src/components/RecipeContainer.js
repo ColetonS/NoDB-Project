@@ -164,25 +164,27 @@ export default class RecipeContainer extends Component {
     return (
       <div className="add-recipe-container">
         <div className="add-recipe">
-        <h3>Add Recipe</h3>
+        <h2>Add Recipe</h2>
           <div id="new-recipe">
-            <div><input
+            <div>
+              <input
             onChange={e => this.handleTitleChange(e.target.value)}
             placeholder="Title"
             />
-            <input
+             <input
             onChange={e => this.handleCuisineChange(e.target.value)}
             placeholder="Cuisine"
             />
-            <input
+             <input
             onChange={e => this.handleURLChange(e.target.value)}
             placeholder="Image URL"
-            /></div>
+            />
+            </div>
 
             <div><Button
             onClick={() => this.addRecipe()}
             style={{
-            backgroundColor: "black",
+            backgroundColor: '#B81365',
             color: "white",
             borderRadius: "25px"
             }}
@@ -193,27 +195,27 @@ export default class RecipeContainer extends Component {
         </div>
 
         <div>
-          <h3>Search Recipes</h3>
           <div className="search-recipes">
-            <input
-              onChange={e => this.handleSearchChange(e.target.value)}
-              placeholder="Search by Title or Cuisine"
+          <h2>Search Recipes</h2>
+            <div><input
+            onChange={e => this.handleSearchChange(e.target.value)}
+            placeholder="Search by Title or Cuisine"
             />
             <select onChange={e => this.handleSelectChange(e.target.value)}>
-              <option value="">Select your option</option>
-              <option value="title">Title</option>
-              <option value="cuisine">Cuisine</option>
+            <option value="">Select your option</option>
+            <option value="title">Title</option>
+            <option value="cuisine">Cuisine</option>
             </select>
             <Button
-              onClick={() => this.searchRecipes()}
-              style={{
-                backgroundColor: "purple",
-                color: "white",
-                borderRadius: "25px"
-              }}
+            onClick={() => this.searchRecipes()}
+            style={{
+            backgroundColor: "#51483B",
+            color: "white",
+            borderRadius: "25px"
+            }}
             >
-              Search
-            </Button>
+            Search
+            </Button></div>
           </div>
         </div>
 

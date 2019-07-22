@@ -2,10 +2,13 @@
     display: flex;
     justify-content: space-between;
     /* border: 1px solid red; */
+    padding-bottom: 25px;
 
 }
 
-div > img {
-    width: 15vw;
-    height: 15vh;
+#menu-img {
+    border: 1px solid gray;
+    border-radius: 20px;
+    width: 17vw;
+    height: 17vh;
 }

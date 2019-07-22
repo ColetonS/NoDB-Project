@@ -1,17 +1,29 @@
 #recipes {
     width: 400px;
     height: auto;
+    border: 1px solid gray;
+    border-radius: 20px;
 }
 
 .recipe-container {
     display: flex;
     flex-direction: column;
-    border: 2px solid black;
+    border: 2px solid gray;
+    border-radius: 20px;
     margin: 50px;
     padding: 30px;
+    background-color: #D1B078;
 }
 
 .text {
     display: flex;
     justify-content: center;
+}
+
+input {
+    border-radius: 8px;
+}
+
+select {
+    border-radius: 8px;
 }

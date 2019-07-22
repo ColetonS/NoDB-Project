@@ -1,7 +1,8 @@
 .logo > img {
-    border: 1px solid red;
-    width: 10vh;
+    border: 1px solid gray;
+    width: 12vh;
     height: auto;
+    border-radius: 15px;
     
 }
 
@@ -9,3 +10,5 @@
     display: flex;
     
 }
+
+

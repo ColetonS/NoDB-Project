@@ -1,5 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
 .App {
   text-align: center;
-  background-color: #F0EAD6;
+  background-color: #DDC6A0;
+
+  
 }
 
+h1 {
+  color: #1A1A1A;
+  font-size: 50px;
+}
+
+h2 {
+  color: #3F3F3F;
+}
+
+h3 {
+  color: #585858;
+}
+
+h4 {
+  color: #2B223B;
+}
+
+
+body {
+  font-family: 'Dosis', sans-serif;
+}

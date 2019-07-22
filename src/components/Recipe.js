@@ -33,12 +33,12 @@ export default class Recipe extends Component {
         <div><Button
         id='recipe-button'
         onClick={this.toggle}
-        style={{ backgroundColor: "blue", color: "white", borderRadius: '25px' }}
+        style={{ backgroundColor: "#283044", color: "white", borderRadius: '25px' }}
         >
         Edit
         </Button>
         <Button
-        onClick={() => {this.props.deleteFn(this.props.id)}} style={{backgroundColor: 'red', color: 'white', borderRadius: '25px'}}
+        onClick={() => {this.props.deleteFn(this.props.id)}} style={{backgroundColor: '#C74E4C', color: 'white', borderRadius: '25px'}}
         >Delete
         </Button></div>
       </div>

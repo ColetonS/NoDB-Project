@@ -30,7 +30,7 @@ export default class EditRecipe extends Component {
         />
         <Button
             onClick={() => {this.props.editFn(this.props.id)}}
-            style={{backgroundColor: 'purple', color: 'white'}}
+            style={{backgroundColor: '#2B223B', color: 'white', borderRadius: '25px'}}
         >Submit Changes</Button>
       </div>
     );

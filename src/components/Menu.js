@@ -40,7 +40,7 @@ export default class Menu extends Component {
            return (
                <div key={el.id}>
                     <h3>{el.title}</h3>
-                    <img src={el.img} alt={el.title} />
+                    <img id='menu-img' src={el.img} alt={el.title} />
                </div>
            )
        })
@@ -51,7 +51,7 @@ export default class Menu extends Component {
                 </section>
                 <Button 
                     onClick={() => this.randomize()}
-                    style={{backgroundColor: '#FF4500', color: 'white', borderRadius: '25px', height: '4vh'}}
+                    style={{backgroundColor: '#93ACB5', color: 'white', borderRadius: '25px', height: '6vh'}}
                     >
                         Generate Your Weekly Menu
                     </Button>
